@@ -1,5 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&display=swap");
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 :root {
   font-family: "Inter Tight", system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -39,8 +45,9 @@ body {
 }
 
 h1 {
-  font-size: 3.2em;
+  font-size: 2em;
   line-height: 1.1;
+  margin-bottom: 40px;
 }
 
 button {
@@ -94,13 +101,17 @@ tbody tr:nth-child(odd) {
   background-color: #333333;
 }
 
-.nav {
-  display: flex;
-  justify-content: flex-start;
-  padding: 1em 2em;
+nav {
+  padding: 1em;
+  margin-bottom: 3rem;
 }
 
-.nav-item {
+nav ul {
+  display: flex;
+  justify-content: flex-start;
+}
+
+nav ul li {
   padding: 0 0.5rem;
   list-style: none;
 }
@@ -119,6 +130,64 @@ tbody tr:nth-child(odd) {
   table-layout: fixed;
 }
 
-img {
-  width: 180px;
+.candidates-search img {
+  width: 100%;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+.candidate-data {
+  width: 250px;
+}
+
+.card {
+  width: 100%;
+}
+
+.candidate-content {
+  background-color: #000;
+  color: #c5bdbd;
+  padding: 10px;
+}
+
+.card h2 {
+  color: #ffffff;
+  font-size: 1.2rem;
+}
+
+.candidate-content * {
+  margin-bottom: 10px;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.buttons svg,
+table svg {
+  font-size: 40px;
+  cursor: pointer;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+table th,
+table td {
+  border: 1px solid blue;
+}
+
+table tr td {
+  width: calc(100% / 7);
+  text-align: center;
+  padding: 10px;
+}
+
+table img {
+  width: 50px;
+  border-radius: 10px;
 }
